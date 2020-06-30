@@ -1,0 +1,87 @@
+﻿using GMS_System.CustomModel;
+using GMS_System.Interface;
+using GMS_System.Model;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace GMS_System.WebAPI.Provider
+{
+    public class StoreCaller
+    {
+
+        #region Variable
+        public IStore _storeRepository;
+        #endregion
+        public List<StoreMaster> getStoreDetailbyNameAndPincode(IStore store, string SearchText, int tenantID)
+        {
+            _storeRepository = store;
+            return _storeRepository.getStoreDetailByStorecodenPincode(SearchText, tenantID);
+        }
+
+        public List<StoreMaster> getStores(IStore store, string searchText, int tenantID)
+        {
+            _storeRepository = store;
+            return _storeRepository.getStores(searchText, tenantID);
+        }
+        public int AddStore(IStore store, StoreMaster storeMaster, int TenantID, int UserID)
+        {
+            _storeRepository = store;
+            return _storeRepository.CreateStore(storeMaster, TenantID, UserID);
+        }
+        public int EditStore(IStore store, StoreMaster storeMaster, int TenantID, int UserID)
+        {
+            _storeRepository = store;
+            return _storeRepository.EditStore(storeMaster, TenantID, UserID);
+        }
+        public int DeleteStore(IStore store, int StoreID, int TenantID, int UserID)
+        {
+            _storeRepository = store;
+            return _storeRepository.DeleteStore(StoreID, TenantID, UserID);
+        }
+        public List<CustomStoreList> StoreList(IStore store, int TenantID)
+        {
+            _storeRepository = store;
+            return _storeRepository.StoreList(TenantID);
+        }
+        public List<StoreMaster> SearchStore(IStore store, int StateID, int PinCode, string Area, bool IsCountry)
+        {
+            _storeRepository = store;
+            return _storeRepository.SearchStore(StateID, PinCode, Area, IsCountry);
+        }
+        public int AttachStore(IStore store, string StoreId, int TicketId, int CreatedBy)
+        {
+            _storeRepository = store;
+            return _storeRepository.AttachStore(StoreId, TicketId, CreatedBy);
+        }
+        public List<StoreMaster> getSelectedStores(IStore store, int TicketId)
+        {
+            _storeRepository = store;
+            return _storeRepository.getSelectedStoreByTicketId(TicketId);
+        }
+        public List<string> StoreBulkUpload(IStore Store, int TenantID, int CreatedBy, DataSet DataSetCSV)
+        {
+            _storeRepository = Store;
+            return _storeRepository.BulkUploadStore(TenantID, CreatedBy, DataSetCSV);
+        }
+        public int CreateCampaignScript(IStore Store, CampaignScript campaignScript)
+        {
+            _storeRepository = Store;
+            return _storeRepository.CreateCampaignScript(campaignScript);
+        }
+        public int UpdateClaimAttechmentSetting(IStore Store, ClaimAttechment claimAttechment)
+        {
+            _storeRepository = Store;
+            return _storeRepository.UpdateClaimAttechmentSetting(claimAttechment);
+        }
+
+        public List<string> UserBulkUpload(IStore Store, int TenantID, int CreatedBy, int UserFor, DataSet DataSetCSV)
+        {
+            _storeRepository = Store;
+            return _storeRepository.BulkUploadUser(TenantID, CreatedBy, UserFor, DataSetCSV);
+        }
+
+    }
+}

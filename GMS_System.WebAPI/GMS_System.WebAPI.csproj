@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <AssemblyName>GMS_System.WebAPI</AssemblyName>
+    <RootNamespace>GMS_System.WebAPI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\**" />
+    <Compile Remove="BulkUpload\**" />
+    <Compile Remove="Provider\Store\**" />
+    <Content Remove="Areas\**" />
+    <Content Remove="BulkUpload\**" />
+    <Content Remove="Provider\Store\**" />
+    <EmbeddedResource Remove="Areas\**" />
+    <EmbeddedResource Remove="BulkUpload\**" />
+    <EmbeddedResource Remove="Provider\Store\**" />
+    <None Remove="Areas\**" />
+    <None Remove="BulkUpload\**" />
+    <None Remove="Provider\Store\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Provider\BlockEmailCaller.cs" />
+    <Compile Remove="Provider\DashBoardCaller.cs" />
+    <Compile Remove="Provider\DepartmentCaller.cs" />
+    <Compile Remove="Provider\DesignationCaller.cs" />
+    <Compile Remove="Provider\FeaturePlanCaller.cs" />
+    <Compile Remove="Provider\HierarchyCaller.cs" />
+    <Compile Remove="Provider\JunkWordsCaller.cs" />
+    <Compile Remove="Provider\KnowledgeCaller.cs" />
+    <Compile Remove="Provider\NotificationCaller.cs" />
+    <Compile Remove="Provider\OrderCaller.cs" />
+    <Compile Remove="Provider\PaymentCaller.cs" />
+    <Compile Remove="Provider\SearchCaller.cs" />
+    <Compile Remove="Provider\SLACaller.cs" />
+    <Compile Remove="Provider\StoreCaller.cs" />
+    <Compile Remove="Provider\TaskCaller.cs" />
+    <Compile Remove="Provider\TemplateCaller.cs" />
+    <Compile Remove="Provider\TenantCaller.cs" />
+    <Compile Remove="Provider\TicketingCaller.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GMS_System.CustomModel\GMS_System.CustomModel.csproj" />
+    <ProjectReference Include="..\GMS_System.DBContext\GMS_System.DBContext.csproj" />
+    <ProjectReference Include="..\GMS_System.Interface\GMS_System.Interface.csproj" />
+    <ProjectReference Include="..\GMS_System.Services\GMS_System.Services.csproj" />
+  </ItemGroup>
+
+</Project>

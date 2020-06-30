@@ -1,0 +1,30 @@
+﻿using GMS_System.Model;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace GMS_System.Interface
+{
+   public interface IReports
+    {
+
+
+        int InsertReport(int tenantId, string ReportName, bool isReportActive, string TicketReportParams,
+            bool IsDaily, bool IsDailyForMonth,  bool IsWeekly, bool IsWeeklyForMonth, bool IsDailyForYear, bool IsWeeklyForYear , int createdBy);
+
+
+        int DeleteReport(int tenantID, int ReportID);
+
+        int SaveReportForDownload(int tenantID,int UserID, int ScheduleID);
+
+        List<ReportModel> GetReportList(int tenantID);
+
+        int GetReportSearch(ReportSearchModel searchModel);
+
+        string DownloadReportSearch(int SchedulerID, int curentUserId, int TenantID);
+
+        string DownloadDefaultReport(DefaultReportRequestModel defaultReportRequestModel, int curentUserId, int TenantID);
+
+        bool SendReportMail(string EmailID, string FilePath, int TenantID, int UserMasterID);
+    }
+}

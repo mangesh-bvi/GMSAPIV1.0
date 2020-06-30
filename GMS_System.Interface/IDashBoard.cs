@@ -1,0 +1,22 @@
+﻿using GMS_System.Model;
+using System.Collections.Generic;
+
+namespace GMS_System.Interface
+{
+    public interface IDashBoard
+    {
+        DashBoardDataModel GetDashBoardCountData(string BrandID, string UserID, string fromdate, string todate, int TenantID);
+
+        DashBoardGraphModel GetDashBoardGraphdata(string BrandID, string UserID, string fromdate, string todate, int TenantID);
+        List<SearchResponseDashBoard> GetDashboardTicketsOnSearch(SearchModelDashBoard searchModel);
+        string DashBoardSearchDataToCSV(SearchModelDashBoard searchModel);
+        LoggedInAgentModel GetLogginAccountInfo(int tenantID, int UserId,string ProfilePicPath); 
+
+        int AddDashBoardSearch(int UserID, string SearchSaveName, string parameter, int TenantId);
+        int DeleteDashBoardSavedSearch(int SearchParamID, int UserID);
+        List<UserTicketSearchMaster> ListSavedDashBoardSearch(int UserID);
+
+
+        DashBoardSavedSearch GetDashBoardTicketsOnSavedSearch(int TenantID, int UserID, int SearchParamID);
+    }
+}

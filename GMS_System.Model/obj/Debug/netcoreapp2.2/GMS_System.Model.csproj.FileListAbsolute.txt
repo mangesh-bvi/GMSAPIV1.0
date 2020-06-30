@@ -1,0 +1,17 @@
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\bin\Debug\netcoreapp2.2\GMS_System.Model.deps.json
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\bin\Debug\netcoreapp2.2\GMS_System.Model.dll
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\bin\Debug\netcoreapp2.2\GMS_System.Model.pdb
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.csprojAssemblyReference.cache
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.csproj.CoreCompileInputs.cache
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.AssemblyInfoInputs.cache
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.AssemblyInfo.cs
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.dll
+D:\GMS\GMS_API\GMS\Easyrewardz_TicketSystem.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.pdb
+D:\GMS\GMS_API\GMS\GMS_System.Model\bin\Debug\netcoreapp2.2\GMS_System.Model.deps.json
+D:\GMS\GMS_API\GMS\GMS_System.Model\bin\Debug\netcoreapp2.2\GMS_System.Model.dll
+D:\GMS\GMS_API\GMS\GMS_System.Model\bin\Debug\netcoreapp2.2\GMS_System.Model.pdb
+D:\GMS\GMS_API\GMS\GMS_System.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.csproj.CoreCompileInputs.cache
+D:\GMS\GMS_API\GMS\GMS_System.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.AssemblyInfoInputs.cache
+D:\GMS\GMS_API\GMS\GMS_System.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.AssemblyInfo.cs
+D:\GMS\GMS_API\GMS\GMS_System.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.dll
+D:\GMS\GMS_API\GMS\GMS_System.Model\obj\Debug\netcoreapp2.2\GMS_System.Model.pdb

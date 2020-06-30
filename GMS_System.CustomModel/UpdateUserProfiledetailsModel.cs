@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace GMS_System.CustomModel
+{
+   public class UpdateUserProfiledetailsModel
+    {
+        public int UserId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string MobileNo { get; set; }
+        public string EmailId { get; set; }
+        public int DesignationID { get; set; }
+        public string DesignationName { get; set; }
+        public string ProfilePicture { get; set; }
+    }
+
+    public class ProfileDetailsmodel
+    {
+
+        public int Result { get; set; }
+        public string ProfilePath { get; set; }
+    }
+}

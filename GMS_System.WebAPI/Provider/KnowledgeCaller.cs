@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using GMS_System.Interface;
+using GMS_System.CustomModel;
+using GMS_System.Model;
+
+namespace GMS_System.WebAPI.Provider
+{
+
+    public class KnowledgeCaller
+    {
+        #region Variable
+        public IKnowledge _KnowledgeRepository;
+        #endregion
+        /// <summary>
+        /// Search By Category
+        /// </summary>
+        /// <param name=""></param>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public List<KnowlegeBaseMaster> SearchByCategory(IKnowledge Knowledge, int type_ID, int Category_ID, int SubCategory_ID,int TenantId)
+        {
+            _KnowledgeRepository = Knowledge;
+            return _KnowledgeRepository.SearchByCategory(type_ID, Category_ID, SubCategory_ID, TenantId);
+        }
+
+        public int AddKB(IKnowledge Knowledge, KnowlegeBaseMaster knowlegeBaseMaster)
+        {
+
+            _KnowledgeRepository = Knowledge;
+            return _KnowledgeRepository.AddKB(knowlegeBaseMaster);
+        }
+
+        public int UpdateKB(IKnowledge Knowledge, KnowlegeBaseMaster knowlegeBaseMaster)
+        {
+            _KnowledgeRepository = Knowledge;
+            return _KnowledgeRepository.UpdateKB(knowlegeBaseMaster);
+        }
+
+
+        public int DeleteKB(IKnowledge Knowledge, int KBID, int TenantId)
+        {
+            _KnowledgeRepository = Knowledge;
+            return _KnowledgeRepository.DeleteKB(KBID, TenantId);
+        }
+
+        public int RejectApproveKB(IKnowledge Knowledge, KnowlegeBaseMaster knowlegeBaseMaster)
+        {
+            _KnowledgeRepository = Knowledge;
+            return _KnowledgeRepository.RejectApproveKB(knowlegeBaseMaster);
+        }
+        public CustomKBList KBList(IKnowledge Knowledge, int TenantId)
+        {
+            _KnowledgeRepository = Knowledge;
+            return _KnowledgeRepository.KBList( TenantId);
+        }
+
+        public CustomKBList SearchKB(IKnowledge Knowledge, int Category_ID, int SubCategory_ID, int type_ID, int TenantId)
+        {
+            _KnowledgeRepository = Knowledge;
+            return _KnowledgeRepository.SearchKB(Category_ID, SubCategory_ID, type_ID,TenantId);
+        }
+    }
+}
